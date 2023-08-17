@@ -6,6 +6,7 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
+  display: inline-block;
 }
 
 .logo {
@@ -49,4 +50,10 @@
   padding: 10px;
   border: 1px solid #ccc;
   overflow: auto;
+}
+
+.nome {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-top: 0px;
 }

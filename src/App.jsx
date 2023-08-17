@@ -6,8 +6,17 @@ function App() {
     'let valor; if (condicao) { valor = 10 } else { valor = "Texto" };';
   const message3 =
     "As expressões relacionais comparam valores e retornam valores booleanos (true ou false). Operadores relacionais incluem igual (==), diferente (!=), maior que (>), menor que (<), maior ou igual que (>=) e menor ou igual que (<=).";
+  const message4 =
+    'if (idade >= 18) { console.log("Você é maior de idade.") } else {console.log("Você é menor de idade.") }';
+  const message5 =
+    'for (let i = 0; i < 5; i++) { console.log("Contagem:", i) }';
+  const message6 = "switch (dia) {";
+  const message7 = "}";
+  const message8 = "for (let numero of numeros) {";
   return (
     <>
+      <h1>Diário de Bordo</h1>
+      <h3 className="nome">Discente: Felipe Moreira Silva</h3>
       <p>
         JavaScript é uma linguagem de programação amplamente utilizada no
         desenvolvimento web. É uma linguagem de alto nível, interpretada e
@@ -481,22 +490,22 @@ function App() {
       </p>
       <h3>Principais características das constantes em JavaScript</h3>
       <p>
-        <strong>Declaração:</strong>Em JavaScript, você pode declarar uma
+        <strong>Declaração: </strong>Em JavaScript, você pode declarar uma
         constante usando a palavra-chave const, seguida pelo nome da constante e
         pelo valor que ela receberá.
       </p>
       <p>
-        <strong>Atribuição Única:</strong>Uma vez atribuído um valor a uma
+        <strong>Atribuição Única: </strong>Uma vez atribuído um valor a uma
         constante, esse valor não pode ser alterado. Tentar reatribuir um valor
         a uma constante resultará em um erro.
       </p>
       <p>
-        <strong>Escopo:</strong>Assim como variáveis declaradas com let, as
+        <strong>Escopo: </strong>Assim como variáveis declaradas com let, as
         constantes têm escopo de bloco. Isso significa que elas estão
         disponíveis apenas dentro do bloco em que foram declaradas.
       </p>
       <p>
-        <strong>Boas Práticas:</strong>Por convenção, o nome das constantes é
+        <strong>Boas Práticas: </strong>Por convenção, o nome das constantes é
         geralmente escrito em letras maiúsculas e separadas por underscores.
         Isso melhora a legibilidade e facilita a identificação das constantes no
         código.
@@ -517,35 +526,35 @@ function App() {
         criados. Os tipos primitivos incluem:
       </p>
       <p>
-        <strong>Number:</strong>Representa valores numéricos, incluindo números
+        <strong>Number: </strong>Representa valores numéricos, incluindo números
         inteiros e números de ponto flutuante. Exemplo: 10, 3.14.
       </p>
       <p>
-        <strong>String:</strong>Representa sequências de caracteres, como texto.
-        As strings são definidas entre aspas simples ou duplas. Exemplo: 'Olá',
-        "Mundo".
+        <strong>String: </strong>Representa sequências de caracteres, como
+        texto. As strings são definidas entre aspas simples ou duplas. Exemplo:
+        'Olá', "Mundo".
       </p>
       <p>
-        <strong>Boolean:</strong>Representa valores lógicos, verdadeiro ou
+        <strong>Boolean: </strong>Representa valores lógicos, verdadeiro ou
         falso. É frequentemente usado para tomada de decisões em expressões
         condicionais. Exemplo: true, false.
       </p>
       <p>
-        <strong>Null:</strong>Representa a ausência intencional de qualquer
+        <strong>Null: </strong>Representa a ausência intencional de qualquer
         valor ou objeto. É um valor único. Exemplo: null.
       </p>
       <p>
-        <strong>Undefined:</strong>Representa o valor de uma variável que foi
+        <strong>Undefined: </strong>Representa o valor de uma variável que foi
         declarada, mas não foi atribuída com um valor. É também um valor único.
         Exemplo: undefined.
       </p>
       <p>
-        <strong>Symbol:</strong>Introduzido no ECMAScript 6 (ES6), os símbolos
+        <strong>Symbol: </strong>Introduzido no ECMAScript 6 (ES6), os símbolos
         são valores únicos e imutáveis que são frequentemente usados como chaves
         para propriedades de objetos. Exemplo: Symbol("descricao").
       </p>
       <p>
-        <strong>BigInt:</strong>Introduzido no ECMAScript 11, os BigInts são
+        <strong>BigInt: </strong>Introduzido no ECMAScript 11, os BigInts são
         usados para representar inteiros maiores do que o limite superior que o
         tipo Number pode acomodar. Eles são criados adicionando a letra "n" ao
         final de um número inteiro. Exemplo:
@@ -569,8 +578,9 @@ function App() {
       </p>
       <h3>Principais características dos arrays em JavaScript</h3>
       <p>
-        <strong>Declaração:</strong>Os arrays em JavaScript podem ser declarados
-        usando colchetes [] e separando os elementos por vírgulas. Por exemplo:
+        <strong>Declaração: </strong>Os arrays em JavaScript podem ser
+        declarados usando colchetes [] e separando os elementos por vírgulas.
+        Por exemplo:
       </p>
       <div className="code">
         <code>
@@ -579,28 +589,28 @@ function App() {
         </code>
       </div>
       <p>
-        <strong>Acesso aos Elementos:</strong>Os elementos dentro de um array
+        <strong>Acesso aos Elementos: </strong>Os elementos dentro de um array
         são acessados por meio de um índice numérico baseado em zero. Por
         exemplo, numeros[0] acessa o primeiro elemento do array numeros.
       </p>
       <p>
-        <strong>Tamanho do Array:</strong>O tamanho (ou comprimento) de um array
-        é determinado pela quantidade de elementos que ele contém. Isso pode ser
-        obtido usando a propriedade length.
+        <strong>Tamanho do Array: </strong>O tamanho (ou comprimento) de um
+        array é determinado pela quantidade de elementos que ele contém. Isso
+        pode ser obtido usando a propriedade length.
       </p>
       <p>
-        <strong>Métodos do Array:</strong>JavaScript oferece uma série de
+        <strong>Métodos do Array: </strong>JavaScript oferece uma série de
         métodos embutidos para manipular arrays, como push(), pop(), shift(),
         unshift(), splice(), concat(), join(), indexOf(), slice() e muitos
         outros.
       </p>
       <p>
-        <strong>Iteração:</strong>Pode-se percorrer os elementos de um array
+        <strong>Iteração: </strong>Pode-se percorrer os elementos de um array
         usando loops, como o for, ou métodos como forEach(), map(), filter(),
         reduce().
       </p>
       <p>
-        <strong>Arrays Multidimensionais:</strong>Arrays podem conter outros
+        <strong>Arrays Multidimensionais: </strong>Arrays podem conter outros
         arrays, criando arrays multidimensionais que representam estruturas mais
         complexas, como matrizes.
       </p>
@@ -723,6 +733,169 @@ function App() {
           let idade = 30;
         </code>
       </div>
+      <h2>Instrução de Seleção</h2>
+      <p>
+        As instruções de seleção permitem que o programa tome decisões com base
+        em condições. A instrução if verifica uma condição e executa um bloco de
+        código se a condição for verdadeira. A instrução else (opcional) executa
+        um bloco de código se a condição for falsa.
+      </p>
+      <div className="code">
+        <code>
+          let idade = 30; <br />
+        </code>
+        <code>{message4}</code>
+      </div>
+      <h2>Instrução Iterativa</h2>
+      <p>
+        As instruções iterativas permitem que um bloco de código seja executado
+        repetidamente. A instrução for é usada para criar um loop que executa um
+        bloco de código um número específico de vezes.
+      </p>
+      <div className="code">
+        <code>{message5}</code>
+      </div>
+      <h2>Controle definido pelo Usuário</h2>
+      <p>
+        A instrução switch é usada para verificar uma expressão em relação a
+        múltiplos casos e executar o bloco de código associado ao caso
+        correspondente
+      </p>
+      <div className="code">
+        let dia = "quarta";
+        <br />
+        {message6}
+        <br />
+        case "segunda":
+        <br /> case "terça":
+        <br /> case "quarta":
+        <br /> case "quinta":
+        <br /> case "sexta":
+        <br /> console.log("Dia de trabalho");
+        <br /> break;
+        <br /> case "sábado":
+        <br /> case "domingo":
+        <br /> console.log("Fim de semana");
+        <br /> break;
+        <br /> default:
+        <br />
+        console.log("Dia inválido");
+        <br />
+        {message7}
+      </div>
+      <h2>Iteração sobre Estruturas</h2>
+      <p>
+        O loop for...of é usado para percorrer elementos de estruturas como
+        arrays, strings e outros objetos iteráveis.
+      </p>
+      <div className="code">
+        let numeros = [1, 2, 3, 4, 5]; <br />
+        {message8} <br />
+        console.log(numero);
+        <br />
+        {message7}
+      </div>
+      <h2>Subprogramas</h2>
+      <p>
+        Um subprograma, também conhecido como função, é um bloco de código
+        autônomo que realiza uma tarefa específica. Em JavaScript, as funções
+        são usadas para dividir o código em partes menores e mais gerenciáveis,
+        promovendo a reutilização e organização do código.
+      </p>
+      <h3>Principais características das funções em JavaScript</h3>
+      <p>
+        <strong>Declaração de Função: </strong>as funções podem ser declaradas
+        usando a palavra-chave function, seguida pelo nome da função e seus
+        parâmetros.
+      </p>
+      <p>
+        <strong>Chamada de Função: </strong>
+        as funções são chamadas pelo nome, seguido por parênteses, que podem
+        conter argumentos necessários para a função.
+      </p>
+      <p>
+        <strong>Retorno de Valor: </strong>as funções podem retornar valores
+        usando a palavra-chave return. O valor retornado pode ser usado em
+        outras partes do programa.
+      </p>
+      <p>
+        <strong>Escopo de Função: </strong>variáveis declaradas dentro de uma
+        função têm escopo local e são acessíveis apenas dentro daquela função.
+      </p>
+      <p>
+        <strong>Funções Anônimas e Arrow Functions: </strong>além das funções
+        declaradas com function, você também pode criar funções anônimas e arrow
+        functions (introduzidas no ES6) para sintaxe mais concisa.
+      </p>
+      <p>
+        <strong>Parâmetros Padrão: </strong>você pode definir valores padrão
+        para os parâmetros de uma função, que serão usados quando não houver
+        argumentos correspondentes.
+      </p>
+      <p>
+        <strong>Subprogramas aninhados: </strong>também conhecidos como funções
+        dentro de funções, são funções que são definidas dentro de outras
+        funções. Elas têm acesso às variáveis da função "pai" e podem ser
+        chamadas apenas dentro dessa função. Isso ajuda a modularizar o código e
+        limitar o escopo de variáveis, evitando conflitos de nomes.
+      </p>
+      <h2>Tratamento de Exceções</h2>
+      <p>
+        O tratamento de exceções é uma técnica usada para lidar com erros e
+        situações excepcionais que podem ocorrer durante a execução de um
+        programa. Em JavaScript, o tratamento de exceções é feito usando blocos
+        try, catch, finally e a criação de objetos Error.
+      </p>
+      <h3>Principais componentes do tratamento de exceções em JavaScript</h3>
+      <h4>Try-catch</h4>
+      <p>
+        O bloco try é usado para envolver o código que pode gerar exceções. Se
+        ocorrer uma exceção dentro desse bloco, o controle é transferido para o
+        bloco catch.
+      </p>
+      <h4>Finally</h4>
+      <p>
+        O bloco finally é opcional e é usado para definir um bloco de código que
+        será executado independentemente de ocorrer ou não uma exceção no bloco
+        try.
+      </p>
+      <h4>Objetos de Exceção</h4>
+      <p>
+        Erros em JavaScript são representados como objetos de exceção. Você pode
+        criar seus próprios objetos de erro usando a classe Error ou suas
+        subclasses, como SyntaxError, TypeError, ReferenceError etc.
+      </p>
+      <h2>Orientação a Objetos</h2>
+      <p>
+        JavaScript é uma linguagem de programação orientada a objetos, o que
+        significa que você pode usar os conceitos de classes e objetos para
+        criar estruturas mais organizadas e reutilizáveis.
+      </p>
+      <h3>Principais componentes da Orientação a Objetos em JavaScript</h3>
+      <h4>Objetos</h4>
+      <p>
+        Em JavaScript, objetos são coleções de propriedades, que são pares de
+        chave e valor. As propriedades podem ser métodos (funções) ou atributos
+        (variáveis).
+      </p>
+      <h4>Classes</h4>
+      <p>
+        Introduzidas no ECMAScript 6 (ES6), as classes são uma maneira de criar
+        objetos usando uma sintaxe mais orientada a objetos. Elas fornecem uma
+        forma de criar um "modelo" para objetos com propriedades e métodos.
+      </p>
+      <h4>Herança</h4>
+      <p>
+        JavaScript suporta herança de classes, permitindo que você crie uma nova
+        classe com base em uma classe existente. A nova classe herda as
+        propriedades e métodos da classe pai.
+      </p>
+      <h4>Encapsulamento e Polimorfismo</h4>
+      <p>
+        JavaScript oferece formas de encapsular dados e comportamentos, além de
+        suportar polimorfismo, que permite que diferentes objetos compartilhem o
+        mesmo método ou propriedade.
+      </p>
     </>
   );
 }
