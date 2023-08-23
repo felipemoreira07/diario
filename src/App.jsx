@@ -12,7 +12,18 @@ function App() {
     'for (let i = 0; i < 5; i++) { console.log("Contagem:", i) }';
   const message6 = "switch (dia) {";
   const message7 = "}";
+  const legal = "{";
   const message8 = "for (let numero of numeros) {";
+  const message9 =
+    'function saudacao(nome) {console.log("Olá, " + nome + "!")}';
+  const message10 = 'saudacao("Alice");  // Saída: "Olá, Alice!"';
+  const message11 = "function soma(a, b) {return a + b}";
+  const message12 = "let resultado = soma(5, 3);  // resultado é 8";
+  const message13 = "const dobrar = (num) => num * 2;";
+  const message14 =
+    'function saudacao(nome = "Visitante") {console.log("Olá, " + nome + "!")}';
+  const message15 =
+    "console.log(`${myCar.make} ${myCar.model} has ${myCar.mileage} miles.`);";
   return (
     <>
       <h1>Diário de Bordo</h1>
@@ -762,26 +773,28 @@ function App() {
         correspondente
       </p>
       <div className="code">
-        let dia = "quarta";
-        <br />
-        {message6}
-        <br />
-        case "segunda":
-        <br /> case "terça":
-        <br /> case "quarta":
-        <br /> case "quinta":
-        <br /> case "sexta":
-        <br /> console.log("Dia de trabalho");
-        <br /> break;
-        <br /> case "sábado":
-        <br /> case "domingo":
-        <br /> console.log("Fim de semana");
-        <br /> break;
-        <br /> default:
-        <br />
-        console.log("Dia inválido");
-        <br />
-        {message7}
+        <code>
+          let dia = "quarta";
+          <br />
+          {message6}
+          <br />
+          case "segunda":
+          <br /> case "terça":
+          <br /> case "quarta":
+          <br /> case "quinta":
+          <br /> case "sexta":
+          <br /> console.log("Dia de trabalho");
+          <br /> break;
+          <br /> case "sábado":
+          <br /> case "domingo":
+          <br /> console.log("Fim de semana");
+          <br /> break;
+          <br /> default:
+          <br />
+          console.log("Dia inválido");
+          <br />
+          {message7}
+        </code>
       </div>
       <h2>Iteração sobre Estruturas</h2>
       <p>
@@ -789,11 +802,13 @@ function App() {
         arrays, strings e outros objetos iteráveis.
       </p>
       <div className="code">
-        let numeros = [1, 2, 3, 4, 5]; <br />
-        {message8} <br />
-        console.log(numero);
-        <br />
-        {message7}
+        <code>
+          let numeros = [1, 2, 3, 4, 5]; <br />
+          {message8} <br />
+          console.log(numero);
+          <br />
+          {message7}
+        </code>
       </div>
       <h2>Subprogramas</h2>
       <p>
@@ -808,30 +823,73 @@ function App() {
         usando a palavra-chave function, seguida pelo nome da função e seus
         parâmetros.
       </p>
+      <div className="code">
+        <code>{message9}</code>
+      </div>
       <p>
         <strong>Chamada de Função: </strong>
         as funções são chamadas pelo nome, seguido por parênteses, que podem
         conter argumentos necessários para a função.
       </p>
+      <div className="code">
+        <code>{message10}</code>
+      </div>
       <p>
         <strong>Retorno de Valor: </strong>as funções podem retornar valores
         usando a palavra-chave return. O valor retornado pode ser usado em
         outras partes do programa.
       </p>
+      <div className="code">
+        <code>
+          function soma(a, b) {legal} <br />
+          return a + b; <br />
+          {message7} <br />
+          let resultado = soma(5, 3); // resultado é 8
+        </code>
+      </div>
       <p>
         <strong>Escopo de Função: </strong>variáveis declaradas dentro de uma
         função têm escopo local e são acessíveis apenas dentro daquela função.
       </p>
+      <div className="code">
+        <code>
+          function outerFunction() {legal} <br />
+          const outerVariable = "I am from outer function";
+          <br />
+          function innerFunction() {legal} <br />
+          const innerVariable = "I am from inner function";
+          <br />
+          console.log(innerVariable); // Acesso à variável da função interna
+          <br />
+          console.log(outerVariable); // Acesso à variável da função externa
+          <br />
+          {message7} <br />
+          innerFunction();
+          <br />
+          // console.log(innerVariable); // Isso resultaria em um erro, pois
+          innerVariable não está acessível aqui
+          <br />
+          {message7} <br />
+          outerFunction(); // console.log(outerVariable); // Isso resultaria em
+          um erro, pois outerVariable não está acessível aqui
+        </code>
+      </div>
       <p>
         <strong>Funções Anônimas e Arrow Functions: </strong>além das funções
         declaradas com function, você também pode criar funções anônimas e arrow
         functions (introduzidas no ES6) para sintaxe mais concisa.
       </p>
+      <div className="code">
+        <code>{message13}</code>
+      </div>
       <p>
         <strong>Parâmetros Padrão: </strong>você pode definir valores padrão
         para os parâmetros de uma função, que serão usados quando não houver
         argumentos correspondentes.
       </p>
+      <div className="code">
+        <code>{message14}</code>
+      </div>
       <p>
         <strong>Subprogramas aninhados: </strong>também conhecidos como funções
         dentro de funções, são funções que são definidas dentro de outras
@@ -839,6 +897,20 @@ function App() {
         chamadas apenas dentro dessa função. Isso ajuda a modularizar o código e
         limitar o escopo de variáveis, evitando conflitos de nomes.
       </p>
+      <div className="code">
+        <code>
+          function externa() {legal} <br />
+          let a = 10; function interna() {legal} <br />
+          let b = 5; return a + b;
+          <br />
+          {message7} <br />
+          return interna();
+          <br />
+          {message7} <br />
+          {message12}
+        </code>
+      </div>
+
       <h2>Tratamento de Exceções</h2>
       <p>
         O tratamento de exceções é uma técnica usada para lidar com erros e
@@ -853,18 +925,57 @@ function App() {
         ocorrer uma exceção dentro desse bloco, o controle é transferido para o
         bloco catch.
       </p>
+      <div className="code">
+        <code>
+          try {legal}
+          <br />
+          let x = 10;
+          <br />
+          let y = x.toUpperCase();
+          <br />
+          {message7} catch (error) {legal} <br />
+          console.error("Ocorreu um erro:", error.message); <br />
+          {message7}
+        </code>
+      </div>
       <h4>Finally</h4>
       <p>
         O bloco finally é opcional e é usado para definir um bloco de código que
         será executado independentemente de ocorrer ou não uma exceção no bloco
         try.
       </p>
+      <div className="code">
+        <code>
+          try {legal}
+          <br />
+          let x = 10;
+          <br />
+          let y = x.toUpperCase();
+          <br />
+          {message7} catch (error) {legal} <br />
+          console.error("Ocorreu um erro:", error.message); <br />
+          {message7} finally {legal} <br />
+          console.log("Bloco finally executado.");
+        </code>
+      </div>
       <h4>Objetos de Exceção</h4>
       <p>
         Erros em JavaScript são representados como objetos de exceção. Você pode
         criar seus próprios objetos de erro usando a classe Error ou suas
         subclasses, como SyntaxError, TypeError, ReferenceError etc.
       </p>
+      <div className="code">
+        <code>
+          try {legal} <br />
+          if (algumaCondicao) {legal} <br />
+          throw new Error("Isso é um erro personalizado.");
+          <br />
+          {message7}
+          {message7} catch (erro) {legal} <br />
+          console.error(erro.message); <br />
+          {message7}
+        </code>
+      </div>
       <h2>Orientação a Objetos</h2>
       <p>
         JavaScript é uma linguagem de programação orientada a objetos, o que
@@ -878,24 +989,122 @@ function App() {
         chave e valor. As propriedades podem ser métodos (funções) ou atributos
         (variáveis).
       </p>
+      <div className="code">
+        <code>
+          let pessoa = {legal} <br />
+          nome: "Alice", <br />
+          idade: 30, <br />
+          saudacao: function() {legal} <br />
+          console.log("Olá, meu nome é " + this.nome); <br />
+          {message7}
+          {message7}; <br />
+        </code>
+      </div>
       <h4>Classes</h4>
       <p>
         Introduzidas no ECMAScript 6 (ES6), as classes são uma maneira de criar
         objetos usando uma sintaxe mais orientada a objetos. Elas fornecem uma
         forma de criar um "modelo" para objetos com propriedades e métodos.
       </p>
+      <div className="code">
+        <code>
+          class Pessoa {legal} <br />
+          constructor(nome, idade) {legal} <br />
+          this.nome = nome; <br />
+          this.idade = idade; <br />
+          {message7} <br />
+          saudacao() {legal} <br />
+          console.log("Olá, meu nome é " + this.nome); <br />
+          {message7} <br />
+          {message7}
+          let pessoa1 = new Pessoa("Alice", 30);
+        </code>
+      </div>
       <h4>Herança</h4>
       <p>
         JavaScript suporta herança de classes, permitindo que você crie uma nova
         classe com base em uma classe existente. A nova classe herda as
         propriedades e métodos da classe pai.
       </p>
-      <h4>Encapsulamento e Polimorfismo</h4>
+      <div className="code">
+        <code>
+          class Estudante extends Pessoa {legal} <br />
+          constructor(nome, idade, curso) {legal} <br />
+          super(nome, idade); <br />
+          this.curso = curso; <br />
+          {message7} <br />
+          {message7}
+          let estudante1 = new Estudante("Bob", 25, "Engenharia");
+        </code>
+      </div>
+      <h4>Encapsulamento</h4>
       <p>
-        JavaScript oferece formas de encapsular dados e comportamentos, além de
-        suportar polimorfismo, que permite que diferentes objetos compartilhem o
-        mesmo método ou propriedade.
+        O encapsulamento é um conceito que visa ocultar os detalhes internos de
+        uma classe e fornecer uma interface controlada para interagir com ela.
+        Em JavaScript, embora a linguagem não tenha modificadores de acesso como
+        outras linguagens orientadas a objetos, você pode usar convenções para
+        simular encapsulamento.
       </p>
+      <div className="code">
+        <code>
+          class Car {legal} <br />
+          constructor(make, model) {legal} <br />
+          this._make = make; // Convenção para indicar propriedade protegida{" "}
+          <br />
+          this._model = model; this._mileage = 0; <br />
+          {message7} <br />
+          get make() {legal} <br />
+          return this._make; <br />
+          {message7} <br />
+          get model() {legal} <br />
+          return this._model; <br />
+          {message7} <br />
+          get mileage() {legal} <br />
+          return this._mileage; <br />
+          {message7} <br />
+          drive(distance) {legal} <br />
+          this._mileage += distance; <br />
+          {message7}
+          {message7} <br />
+          const myCar = new Car("Toyota", "Camry"); myCar.drive(100); <br />
+          {message15}
+        </code>
+      </div>
+      <h4>Polimorfismo</h4>
+      <p>
+        O polimorfismo permite que objetos de diferentes classes sejam tratados
+        de maneira uniforme por meio de uma interface comum. Isso facilita a
+        reutilização de código e a flexibilidade do sistema.
+      </p>
+      <div className="code">
+        <code>
+          class Animal {legal} <br />
+          constructor(name) {legal} <br />
+          this.name = name; <br />
+          {message7} <br />
+          makeSound() {legal} <br />
+          console.log("Animal makes a sound"); <br />
+          {message7}
+          {message7} <br />
+          class Dog extends Animal {legal} <br />
+          makeSound() {legal} <br />
+          console.log("Dog barks"); <br />
+          {message7}
+          {message7} <br />
+          class Cat extends Animal {legal} <br />
+          makeSound() {legal} <br />
+          console.log("Cat meows"); <br />
+          {message7}
+          {message7} <br />
+          function animalSound(animal) {legal} <br />
+          animal.makeSound(); <br />
+          {message7} <br />
+          const dog = new Dog("Buddy"); <br /> const cat = new Cat("Whiskers");{" "}
+          <br />
+          animalSound(dog); <br /> // Output: "Dog barks" animalSound(cat);{" "}
+          <br /> // Output: "Cat meows"
+        </code>
+      </div>
     </>
   );
 }
